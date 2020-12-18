@@ -143,25 +143,25 @@ $quick: 200ms;
 .insta {
   background-image: url("../assets/i.png");
   background-size: 135% !important;
-  //filter: invert(1);
+  filter: invert(1);
 }
 
 .fb {
   background-image: url("../assets/f.png");
-  //filter: invert(1);
+  filter: invert(1);
   background-size: 125% !important;
 }
 
 .li {
   background-image: url("../assets/li.png");
-  //filter: invert(1);
+  filter: invert(1);
   background-size: 105% !important;
   transform: scale(1.2);
 }
 
 .tw {
   background-image: url("../assets/t.png");
-  //filter: invert(1);
+  filter: invert(1);
 }
 
 

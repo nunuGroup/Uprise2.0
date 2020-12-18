@@ -31,14 +31,40 @@ export default {
 </template>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
   margin: 0px;
   padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 2;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+  //padding: 6px; 
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  //margin: 8px;
+  border-radius: 0px 8px 8px 0px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 .transition-pane-container {
-  background: white;
+  //background: white;
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -48,14 +74,14 @@ body {
   pointer-events: none;
 
   .pane-active {
-    background: red;
+    //background: red;
     height: 100vh;
     bottom: 0px;
     transform: rotate(0deg) scale(1);
   }
 
   .pane-inactive {
-    background: yellow;
+    //background: yellow;
     height: 0vh;
     top: 0px;
     transform: scale(1);
@@ -77,6 +103,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  //height: 100%;
 }
 </style>
