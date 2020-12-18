@@ -1,30 +1,82 @@
+<script>
+import store from './store';
+import Navbar from '@/components/Navbar.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Navbar
+  },
+  data() {
+    return {
+
+    }
+  },
+  mounted() {
+  },
+  computed: {
+    globalTrans() {
+      return store.state.globalTrans;
+    }
+  }
+}
+</script>
+
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="transition-pane-container">
+    <div :class="( globalTrans ? 'pane-active' : 'pane-inactive' )" class="pane"></div>
   </div>
+  <Navbar />
   <router-view/>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
-#nav {
-  padding: 30px;
+.transition-pane-container {
+  background: white;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  padding: 0px;
+  margin: 0px;
+  z-index: 999;
+  pointer-events: none;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  .pane-active {
+    background: red;
+    height: 100vh;
+    bottom: 0px;
+    transform: rotate(0deg) scale(1);
   }
+
+  .pane-inactive {
+    background: yellow;
+    height: 0vh;
+    top: 0px;
+    transform: scale(1);
+  }
+
+  .pane {
+    background: black;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    //transition: 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+    transition: 600ms cubic-bezier(0.87, 0, 0.13, 1);
+  }
+}
+
+.page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 </style>
