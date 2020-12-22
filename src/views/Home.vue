@@ -69,7 +69,11 @@ export default {
     
     <!-- tagline section -->
     <section class="content-section type1 sec2">
-      <div class="tagline-backdrop"></div>
+      <div class="tagline-backdrop">
+        <video loop muted autoplay data-autoplay data-keepplaying id="reel-vid">
+          <source src="../assets/reel.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="tagline"></div>
     </section>
     
@@ -179,10 +183,24 @@ export default {
       </div>
     </section>
 
-    <!--  -->
-    <section class="brands-section">
+    <!-- services -->
+    <section class="services-section">
       <div class="brands-section-inner">
-        who we've worked with
+        Banner
+      </div>
+    </section>
+
+    <!-- services -->
+    <section class="services-section">
+      <div class="brands-section-inner">
+        Services
+      </div>
+    </section>
+
+    <!-- services -->
+    <section class="services-section">
+      <div class="brands-section-inner">
+        Services
       </div>
     </section>
 
@@ -199,6 +217,13 @@ export default {
 @import '../assets/styles/global';
 
 $pageHeight: calc(100vh);
+
+#reel-vid {
+    //width: 177.77777778vh; /* 100 * 16 / 9 */
+    width: 100%;
+    //height: 100vh; /* 100 * 9 / 16 */
+    transform: translate(0%, -130px); /* % of current element */
+}
 
 .stickable {
   background-image: url('../assets/mission-bg.png') !important;
@@ -414,6 +439,7 @@ $pageHeight: calc(100vh);
   margin: auto;
   position: absolute;
   left: 0px;
+  z-index: 9;
   //padding: 0px 64px 0px 0px;
 }
 
@@ -452,8 +478,8 @@ $pageHeight: calc(100vh);
 .tagline-backdrop {
   background-size: cover;
   background-repeat: repeat-x;
-  background-image: url('../assets/collage.png');
-  filter: brightness(0.5) contrast(0.9);
+  //background-image: url('../assets/collage.png');
+  filter: brightness(0.8) contrast(1);
   height: 100% !important;
   width: 100% !important;
   animation: carousel-move linear forwards 40s infinite;
@@ -488,7 +514,7 @@ section {
   font-weight: 700;
   line-height: 1.7em;
   letter-spacing: .14em;
-  margin-top: 80px;
+  margin-top: -80px;
   transition: 100ms;
 }
 
