@@ -1,0 +1,9 @@
+home structure (case studies): {
+    lyft <0>
+    maskfone <1>
+    obliphica <0>
+    superscreen <1>
+    fittea <0>
+    loaded8s <1>
+}
+

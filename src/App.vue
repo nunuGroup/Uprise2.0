@@ -70,7 +70,7 @@ body {
   width: 100vw;
   padding: 0px;
   margin: 0px;
-  z-index: 999;
+  z-index: 999999;
   pointer-events: none;
 
   .pane-active {

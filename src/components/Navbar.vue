@@ -25,18 +25,12 @@ export default {
 
 <template>
   <div class="navbar-container">
+    <router-link class="home-link" to="/"><div class="center-logo"></div></router-link>
     <ul class="nav-items">
         <li class="nav-item hoverable"><router-link class="hoverable" to="/services">SERVICES</router-link></li>
         <li class="nav-item hoverable"><router-link class="hoverable" to="/clients">CLIENTS</router-link></li>
         <li class="nav-item hoverable"><router-link class="hoverable" to="/about">ABOUT</router-link></li>
         <li class="nav-item hoverable"><router-link class="hoverable" to="/contact">CONTACT</router-link></li>
-    </ul>
-    <router-link class="home-link" to="/"><div class="center-logo"></div></router-link>
-    <ul class="social">
-        <a href="https://www.instagram.com/uprisemgmt/"><li class="social-item insta"></li></a>
-        <a href="https://www.facebook.com/lion.shirdan.9"><li class="social-item fb"></li></a>
-        <a href="https://www.linkedin.com/company/uprisemanagement/about/"><li class="social-item li"></li></a>
-        <a href="https://twitter.com/UpriseMGMT"><li class="social-item tw"></li></a>
     </ul>
   </div>
 </template>
@@ -51,7 +45,7 @@ $navHeight: 80px;
 }
 
 .center-logo {
-    background-image: url('../assets/FULL-BLACK2.png');
+    background-image: url('../assets/FULL-BLACK4.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -60,6 +54,7 @@ $navHeight: 80px;
     mix-blend-mode: difference;
     filter: invert(1);
     cursor: pointer;
+    margin-left: 64px;
 
     &:hover {
         opacity: 0.6;
@@ -96,7 +91,9 @@ $navHeight: 80px;
     height: $navHeight;
     display: flex;
     align-items: center;
-    padding: 0px 0px 0px 80px;
+    justify-content: center;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
 }
 
 .router-link-exact-active {
@@ -107,18 +104,19 @@ $navHeight: 80px;
 }
 
 .navbar-container {
-    background: white;
+    //background: white;
     color: white;
     height: $navHeight;
     width: 100%;
     position: fixed;
-    z-index: 99;
+    z-index: 99999;
     top: 0px;
     //padding-right: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     line-height: 0px;
+    mix-blend-mode: difference;
 
     ul {
         list-style: none;
@@ -130,9 +128,9 @@ $navHeight: 80px;
         text-decoration: none;
         color: white;
         font-family: 'Gotham', Helvetica, Arial, sans-serif;
-        font-weight: bold;
+        font-weight: normal;
         mix-blend-mode: difference;
-        opacity: 0.4;
+        //opacity: 0.4;
         font-size: 12px;
         //cursor: none;
     }
