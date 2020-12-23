@@ -1,9 +1,9 @@
 <script>
-
 export default {
   name: 'Home',
   data() {
     return {
+      currentPhoto: 'assets/stickable/obliphica.png',
       stick: false,
       unstick: null,
       windowScroll: null,
@@ -12,9 +12,9 @@ export default {
         stickable2: null
       },
       stickablePhotos: [
-        '../assets/stickable/ateam.png',
-        '../assets/stickable/maskfone.png',
-        '../assets/stickable/obliphica.png'
+        'assets/stickable/ateam.png',
+        'assets/stickable/maskfone.png',
+        'assets/stickable/obliphica.png'
       ]
     }
   },
@@ -26,15 +26,55 @@ export default {
   },
   mounted() {
     console.log('home mounted');
+    this.cyclePhotos();
+
     var rect1 = document.getElementById("stickable1").getBoundingClientRect();
     var rect2 = document.getElementById("stickable2").getBoundingClientRect();
+    
+    var case1 = document.getElementById("case1").getBoundingClientRect();
+    var case2 = document.getElementById("case2").getBoundingClientRect();
+    var case3 = document.getElementById("case3").getBoundingClientRect();
+    var case4 = document.getElementById("case4").getBoundingClientRect();
+    var case5 = document.getElementById("case5").getBoundingClientRect();
+    var case6 = document.getElementById("case6").getBoundingClientRect();
+    
     this.positions.stickable1 = rect1.top;
     this.positions.stickable2 = rect2.top;
+
+    this.positions.case1 = case1.top;
+    this.positions.case2 = case2.top;
+    this.positions.case3 = case3.top;
+    this.positions.case4 = case4.top;
+    this.positions.case5 = case5.top;
+    this.positions.case6 = case6.top;
+
+    console.log('case1', this.positions.case1);
+    console.log('case2', this.positions.case2);
+    console.log('case3', this.positions.case3);
+    console.log('case4', this.positions.case4);
+    console.log('case5', this.positions.case5);
+    console.log('case6', this.positions.case6);
   },
   computed: {
 
   },
   methods: {
+    cyclePhotos() {
+      console.log('cycling photos...');
+      var i = 0;
+      setInterval(() => {
+        this.currentPhoto = this.stickablePhotos[i];
+        console.log(this.currentPhoto);
+        var aboutPath = this.currentPhoto;
+        document.getElementById('stickable1').style.backgroundImage = 'url(' +  require('@/' + aboutPath) + ')';
+        document.getElementById('stickable2').style.backgroundImage = 'url(' +  require('@/' + aboutPath) + ')';
+        if(i == this.stickablePhotos.length - 1) {
+          i = 0;
+        } else {
+          i++;
+        }
+      }, 6000);
+    },
     scrollDown() {
       console.log('scrolling down...');
       window.scroll({
@@ -91,8 +131,8 @@ export default {
     </section>
     
     <!-- lyft case study -->
-    <section class="content-section type0 ctnt">
-      <div class="left-content">
+    <section class="content-section type0 ctnt" id="case1">
+      <div class="left-content" style="background-color:#EA0B8C">
         <div class="left-inner">
           <div class="case-logo lyft-logo"></div>
           <div class="case-text-container">
@@ -103,14 +143,12 @@ export default {
         </div>
       </div>
       <div id="stickable1" class="stickable" :class="( stick ? 'right-stick' : 'right-content' )">
-        <div class="right-content-inner">
-
-        </div>
+        <div class="right-content-inner"></div>
       </div>
     </section>
     
     <!-- maskfone case study -->
-    <section class="content-section type0">
+    <section class="content-section type0" id="case2">
       <div class="left-content" style="background:#e">
         <div class="case-text-container">
           <div class="type1-logo maskfone-logo"></div>
@@ -122,7 +160,7 @@ export default {
     </section>
 
     <!-- obliphica case study -->
-    <section class="content-section type0">
+    <section class="content-section type0" id="case3">
       <div class="left-content" style="background:#eee">
         <div class="right-content-inner">
           <div class="case-logo obliphica-logo"></div>
@@ -139,7 +177,7 @@ export default {
     </section>
 
     <!-- superscreen case study -->
-    <section class="content-section type1">
+    <section class="content-section type1" id="case4">
       <div class="backdrop-layer"></div>
       <div class="content-layer">
         <div class="left-content">
@@ -156,7 +194,7 @@ export default {
     </section>
 
     <!-- fittea case study --> 
-    <section class="content-section type0">
+    <section class="content-section type0" id="case5">
       <div class="left-content">
         <div class="left-inner"></div>
       </div>
@@ -173,7 +211,7 @@ export default {
     </section>
 
     <!-- loaded8s case study -->
-    <section class="content-section type0">
+    <section class="content-section type0" id="case6">
       <div class="left-content">
         <div class="case-logo loaded8s-logo"></div>
         <div class="case-text-container">
@@ -266,10 +304,12 @@ $pageHeight: 100vh;
 }
 
 .stickable {
-  background-image: url('../assets/stickable/maskfone.png') !important;
+  //background-image: url('../assets/stickable/maskfone.png') !important;
+  background-color: orange;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
+  transition: 400ms linear;
 }
 
 .brands-section {
@@ -404,18 +444,20 @@ $pageHeight: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 32px;
+  filter: invert(1);
 }
 
 .case-text-container {
   width: 90%;
   margin: 0px;
+  text-align: center;
 
   p {
-    color: white !important;
+    color: black !important;
   }
 
   a {
-    color: white !important;
+    color: black !important;
     opacity: 0.8 !important;
   }
 
@@ -456,7 +498,7 @@ $pageHeight: 100vh;
 }
 
 .right-content {
-  background: white;
+  //background: white;
   height: 100vh;
   width: 30%; 
   display: flex;
@@ -532,7 +574,7 @@ video {
     position: absolute;
     left: 50%; /* % of surrounding element */
     top: 50%;
-    width: 100%;
+    height: 100vh;
     transform: translate(-50%, -50%); /* % of current element */
 }
 }

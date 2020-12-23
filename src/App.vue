@@ -38,6 +38,7 @@ body {
   padding: 0px;
   font-family: 'Montserrat', sans-serif;
   line-height: 2;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
