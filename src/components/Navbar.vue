@@ -54,7 +54,7 @@ $navHeight: 80px;
     mix-blend-mode: difference;
     filter: invert(1);
     cursor: pointer;
-    margin-left: 64px;
+    margin-left: 32px;
 
     &:hover {
         opacity: 0.6;
@@ -62,7 +62,7 @@ $navHeight: 80px;
 }
 
 .social {
-    width: 500px;
+    width: 400px;
     height: $navHeight;
     //background: blue;
     display: flex;
@@ -87,7 +87,7 @@ $navHeight: 80px;
 }
 
 .nav-items {
-    width: 500px;
+    width: 400px;
     height: $navHeight;
     display: flex;
     align-items: center;
@@ -104,7 +104,8 @@ $navHeight: 80px;
 }
 
 .navbar-container {
-    //background: white;
+    background: transparent;
+    mix-blend-mode: difference;
     color: white;
     height: $navHeight;
     width: 100%;
@@ -116,7 +117,6 @@ $navHeight: 80px;
     align-items: center;
     justify-content: space-between;
     line-height: 0px;
-    mix-blend-mode: difference;
 
     ul {
         list-style: none;
@@ -128,9 +128,9 @@ $navHeight: 80px;
         text-decoration: none;
         color: white;
         font-family: 'Gotham', Helvetica, Arial, sans-serif;
-        font-weight: normal;
+        font-weight: bold;
         mix-blend-mode: difference;
-        //opacity: 0.4;
+        opacity: 0.4;
         font-size: 12px;
         //cursor: none;
     }
