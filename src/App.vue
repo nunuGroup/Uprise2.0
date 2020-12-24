@@ -41,28 +41,25 @@ body {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: black;
   //padding: 6px; 
 
 }
- 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
   background: white;
   //margin: 8px;
   border-radius: 0px 8px 8px 0px; 
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
-}
+}*/
 
 .transition-pane-container {
   //background: white;

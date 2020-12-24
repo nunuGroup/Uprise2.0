@@ -24,7 +24,8 @@ export default {
         'assets/stickable/fittea.png',
         'assets/stickable/superscreen.png',
         'assets/stickable/loaded8s.png'
-      ]
+      ],
+      droppable: [false, false, false, false, false, false, false, false, false]
     }
   },
   created () {
@@ -68,6 +69,13 @@ export default {
 
   },
   methods: {
+    dropdown(context) {
+      console.log('dropping down panel ' + context);
+      for(let i = 0; i < this.droppable.length; i++) {
+        this.droppable[i] = ( i != context ? false : ( this.droppable[i] == true ? false : true ));
+      }
+      console.log(this.droppable);
+    },
     cyclePhotos() {
       console.log('cycling photos...');
       var i = 0;
@@ -279,24 +287,46 @@ artist Natti Natasha. Created and produced entire global campaign feat. Madison 
     </section>
 
     <!-- services -->
-    <section class="brands-section">
-      <div class="brands-section-inner">
-        <div class="service-grid-container">
-          <div class="service-item"></div>
-          <div class="service-item"></div>
-          <div class="service-item"></div>
-          <div class="service-item"></div>
-          <div class="service-item"></div>
-          <div class="service-item"></div>
-          <div class="service-item"></div>
-          <div class="service-item"></div>
-          <div class="service-item"></div>
+    <section class="services-section">
+      <!--h1>Our Services</h1>
+      <div class="divider"></div-->
+      <div class="section-inner">
+        <div class="services-container">
+          <div class="services-container-left">
+            <h1>Services</h1>
+            <p>UPRISE Management is a 360 ̊ full service marketing, branding and creative agency for luxury, premium and digital brands as well as for leading
+e-commerce giants. UPRISE’s experience is broad; specializing in beauty, tech, food & spirits, lifestyle and hospitality. In this digital era, we deliver
+strategy-driven branding, high profile celebrity sourcing, forward-thinking creative marketing and visually rich solutions - all in conjunction with
+integrated media photography, video and global from-start-to-finish production services.</p>
+          </div>
+          <div class="services-container-right">
+            <ul>
+              <li @click="dropdown(0)"><div class="service-icon"></div><span>Strategic Consulting<b></b></span></li>
+              <div class="droppable droppable1" :class="( droppable[0] == true ? 'dropped' : 'collapsed' )"></div>
+              <li @click="dropdown(1)"><div class="service-icon"></div><span>Branding<b></b></span></li>
+              <div class="droppable droppable2" :class="( droppable[1] == true ? 'dropped' : 'collapsed' )"></div>
+              <li @click="dropdown(2)"><div class="service-icon"></div><span>Content Creation<b></b></span></li>
+              <div class="droppable droppable3" :class="( droppable[2] == true ? 'dropped' : 'collapsed' )"></div>
+              <li @click="dropdown(3)"><div class="service-icon"></div><span>Public Relations<b></b></span></li>
+              <div class="droppable droppable4" :class="( droppable[3] == true ? 'dropped' : 'collapsed' )"></div>
+              <li @click="dropdown(4)"><div class="service-icon"></div><span>Talent<b></b></span></li>
+              <div class="droppable droppable5" :class="( droppable[4] == true ? 'dropped' : 'collapsed' )"></div>
+              <li @click="dropdown(5)"><div class="service-icon"></div><span>Email<b></b></span></li>
+              <div class="droppable droppable6" :class="( droppable[5] == true ? 'dropped' : 'collapsed' )"></div>
+              <li @click="dropdown(6)"><div class="service-icon"></div><span>Social Media<b></b></span></li>
+              <div class="droppable droppable7" :class="( droppable[6] == true ? 'dropped' : 'collapsed' )"></div>
+              <li @click="dropdown(7)"><div class="service-icon"></div><span>Spacial Design<b></b></span></li>
+              <div class="droppable droppable8" :class="( droppable[7] == true ? 'dropped' : 'collapsed' )"></div>
+              <li @click="dropdown(8)"><div class="service-icon"></div><span>Additional Services<b></b></span></li>
+              <div class="droppable droppable9" :class="( droppable[8] == true ? 'dropped' : 'collapsed' )"></div>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- brands -->
-    <section class="services-section">
+    <section class="brands-section">
       <div class="brands-section-inner">
         who we've worked with
       </div>
@@ -330,21 +360,86 @@ artist Natti Natasha. Created and produced entire global campaign feat. Madison 
 
 $pageHeight: calc(100vh - 80px);
 
-.service-grid-container {
-  background: red;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 32px;
-  width: 70vw;
-  height: 100%;
-  margin-top: 72px;
-  margin-bottom: 72px;
+.services-container {
+  background: white;
+  height: 900px;
+  width: 75vw;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  display: flex;
 
-  .service-item {
-    background: blue;
-    height: 600px;
+  ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+    .droppable {
+      width: 100%;
+      height: 0px;
+      //background: lime;
+      transition: 300ms;
+    }
+
+    .dropped {
+      //background: pink;
+      height: 200px;
+    }
+
+    .collapsed {
+      //background: gray;
+      height: 0px;
+    }
+    
+    li {
+      padding: 24px 0px 24px 32px;
+      //border: 1px solid black;
+      cursor: pointer;
+      border-top: 1px #e0e0e0 solid;
+
+      span {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        b {
+          margin-right: 24px;
+          //background: yellow;
+          height: 12px;
+          width: 12px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url('../assets/icons/arrow-down.png');
+        }
+      }
+
+      &:hover {
+        background: #eee;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: normal;
+    margin-top: 0px;
+  }
+
+  p {
+    width: 85%;
+  }
+
+  .services-container-left {
+    //background: red;
+    width: 800px;
+  }
+
+  .services-container-right {
+    //background: orange;
     width: 100%;
   }
 }
@@ -473,7 +568,24 @@ $pageHeight: calc(100vh - 80px);
 .brands-section {
   //height: 150vh;
   width: 100%;
-  background: #e0e0e0;
+  background: #eee;
+  flex-direction: column;
+  padding-top: 64px;
+
+  h1 {
+    font-size: 32px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .divider {
+    height: 1px;
+    width: 60vw;
+    background: black;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   //padding: 64px;
 }
 
