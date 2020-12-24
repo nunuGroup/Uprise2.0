@@ -623,6 +623,7 @@ $pageHeight: calc(100vh - 80px);
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transition: 100ms;
 
         b {
           margin-right: 24px;
@@ -638,7 +639,7 @@ $pageHeight: calc(100vh - 80px);
 
       &:hover {
         span {
-          color: gray;
+          color: #999;
 
           b {
             color: black !important;
