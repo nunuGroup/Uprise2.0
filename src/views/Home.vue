@@ -183,12 +183,12 @@ export default {
     
     <!-- maskfone -->
     <section class="content-section type0 ctnt" id="case1">
-      <div class="left-content" style="background-color:#141414">
+      <div class="left-content" style="background-color:#000000">
         <div class="left-inner">
           <div class="case-text-container">
             <div class="case-logo maskfone-logo"></div>
             <h4>STRATEGIC CONSULTING / CONTENT CREATION / WEB DEVELOPMENT</h4>
-            <p>This just so happens to be descriptive text, detailing Uprise Management's involvement with Maskfone, and the creative work commissioned on their end in order to elevate the brand.</p>
+            <p>MASKFONE combines protection, convenience, and technology and embodies this in one stylish, high-quality package. MASKFONE features replaceable PM2.5 and N95/FFP2 filters, a built-in microphone, and earphones, reducing the need to remove your mask in public.</p>
             <a href="https://maskfone.com" class="link-btn">maskfone.com 🡒</a>
           </div>        
         </div>
@@ -200,7 +200,7 @@ export default {
     
     <!-- obliphica -->
     <section class="content-section type0" id="case2">
-      <div class="left-content" style="background:#6B8D06">
+      <div class="left-content" style="background:#060606">
         <div class="left-inner">
           <div class="case-text-container">
             <div class="case-logo obliphica-logo"></div>
@@ -216,14 +216,15 @@ artist Natti Natasha. Created and produced entire global campaign feat. Madison 
 
     <!-- lyft -->
     <section class="content-section type0" id="case3">
-      <div class="left-content" style="background:#352AB5">
+      <div class="left-content" style="background:#111111">
         <div class="left-inner">
           <div class="case-text-container">
             <div class="case-logo lyft-logo"></div>
-            <h4>Strategic Consulting / Content Creation / Campaign Production / Branding / Spatial Design / Talent Sourcing</h4>
-            <p>Rebranded Obliphica Professional’s look entirely. Consulted the brand and establish new directive, new creative flow, secured talent,
-all content creation, award winning spatial design and a fresh new branding. Overseen entire celebrity campaign with award winning latin
-artist Natti Natasha. Created and produced entire global campaign feat. Madison Beer, launching fall 2019.</p>
+            <h4>Talent Activation / Increase Market Awareness / Content Creation</h4>
+            <p>UPRISE was brought on to the influencer and celebrity campaign for Lyft. Activating top influencers
+(TheGabbieShow, Coby Persin, Jon Paul Piques amongst others) as well as bringing celebrities to the table
+such as Sean “Diddy” Combs to create exclusive activations. Additionally, UPRISE generated red carpet
+event placements for Lyft to allow for additional press.</p>
             <a href="https://lyft.com" class="link-btn">lyft.com 🡒</a>
           </div>   
         </div>
@@ -232,14 +233,15 @@ artist Natti Natasha. Created and produced entire global campaign feat. Madison 
 
     <!-- fittea -->
     <section class="content-section type0" id="case4">
-      <div class="left-content" style="background:#E0F5E6">
+      <div class="left-content" style="background:#161616">
         <div class="left-inner">
           <div class="case-text-container">
             <div class="case-logo fittea-logo"></div>
-            <h4>Strategic Consulting / Content Creation / Campaign Production / Branding / Spatial Design / Talent Sourcing</h4>
-            <p>Rebranded Obliphica Professional’s look entirely. Consulted the brand and establish new directive, new creative flow, secured talent,
-all content creation, award winning spatial design and a fresh new branding. Overseen entire celebrity campaign with award winning latin
-artist Natti Natasha. Created and produced entire global campaign feat. Madison Beer, launching fall 2019.</p>
+            <h4>Talent Activation / Social Strategy</h4>
+            <p>UPRISE assigned and advised a dedicated executive to oversee the campaign over a course of 6 months.
+The celebrities activated include Kim Kardashian, Victoria Justice, Kylie Jenner, Khloe Kardashian,
+Vanessa Hudgens, Sarah Hyland, Kat Graham, Ashley Benson, Christina Milian, Amber Rose, Lindsay
+Lohan and many more.</p>
             <a href="https://fittea.com" class="link-btn">fittea.com 🡒</a>
           </div>        
         </div>
@@ -250,14 +252,13 @@ artist Natti Natasha. Created and produced entire global campaign feat. Madison 
     <section class="content-section type1" id="case5">
       <div class="backdrop-layer"></div>
       <div class="content-layer">
-        <div class="left-content" style="background-color:#181816">
+        <div class="left-content" style="background-color:#222222">
           <div class="left-inner">
             <div class="case-text-container">
               <div class="case-logo superscreen-logo"></div>
-              <h4>Strategic Consulting / Content Creation / Campaign Production / Branding / Spatial Design / Talent Sourcing</h4>
-              <p>Rebranded Obliphica Professional’s look entirely. Consulted the brand and establish new directive, new creative flow, secured talent,
-  all content creation, award winning spatial design and a fresh new branding. Overseen entire celebrity campaign with award winning latin
-  artist Natti Natasha. Created and produced entire global campaign feat. Madison Beer, launching fall 2019.</p>
+              <h4>Growth / Amplification</h4>
+              <p>UPRISE secured all marketing talent for the campaign, as well as worked with Kickstarter Live to en-
+sure a live stream during the campaign hosted by top tech blogger TechnoBuffalo.</p>
               <a href="https://superscreen.com" class="link-btn">superscreen.com 🡒</a>
             </div>  
           </div>
@@ -267,15 +268,15 @@ artist Natti Natasha. Created and produced entire global campaign feat. Madison 
 
     <!-- loaded8s -->
     <section class="content-section type0" id="case6">
-      <div class="left-content" style="background: #25134F">
+      <div class="left-content" style="background: #262626">
         <div class="case-text-container">
         <div class="left-inner">
           <div class="case-logo loaded8s-logo"></div>
           <h4>Strategic Consulting / Content Creation / Campaign Production / Branding / Spatial Design / Talent Sourcing</h4>
-          <p>Rebranded Obliphica Professional’s look entirely. Consulted the brand and establish new directive, new creative flow, secured talent,
-all content creation, award winning spatial design and a fresh new branding. Overseen entire celebrity campaign with award winning latin
-artist Natti Natasha. Created and produced entire global campaign feat. Madison Beer, launching fall 2019.</p>
-          <a href="https://superscreen.com" class="link-btn">superscreen.com 🡒</a>
+          <p>Yamia Games hired UPRISE exclusively to advise and oversee operations and marketing for their new
+game, Loaded 8’s. The goal was to generate over 1,000,000 downloads. UPRISE advised on all aspects
+of marketing, PR, talent procurement and growth hacking.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.yakimgames.loaded8s&hl=en_US&gl=US" class="link-btn">Learn More 🡒</a>
         </div>
         </div> 
       </div>
@@ -447,7 +448,22 @@ integrated media photography, video and global from-start-to-finish production s
     </section>
 
     <section class="content-section footer">
-    
+      <div class="foot-left">
+        <div class="description-container">
+          <p>UPRISE Management is a team of creatives, strategists and marketing specialists who are passionate about serving and contributing to the
+creative development and marketing strategies of leading brands. We help brands evolve and assist in creating content that has emotional pull
+evoking a must-have desire from our clients’ target audiences. We are a highly proactive team, committed to the art of effectively communicating
+your message to your target market, whether it is through a re-branding, digital packages, advertising campaigns, celebrity and talent services or
+combinations of all our disciplines. Our work compliments all of your communication channels within both national and international markets.</p>
+          <p><strong>info@uprisemgmt.com</strong></p>
+          <p><strong>2317 Mount Olympus Dr, Los Angeles, CA 90046</strong></p>
+        </div>
+        <div class="soc-container"></div>
+        <div class="copyright-container"><p>c 2020 UPRISE Management . All Rights Reserved</p></div>
+      </div>
+      <div class="foot-right">
+        <div class="big-logo-container"></div>
+      </div>
     </section>
 
 
@@ -458,6 +474,73 @@ integrated media photography, video and global from-start-to-finish production s
 @import '../assets/styles/global';
 
 $pageHeight: calc(100vh - 100px);
+
+.footer {
+  display: flex;
+  color: white !important;
+  margin-left: 36px;
+
+  .foot-left {
+    //background: orange;
+    width: 125%;
+    height: 100%;
+
+    .description-container {
+      //background: purple;
+      width: 100%;
+      color: white;
+
+      p {
+        width: 70%;
+        margin-left: 36px;
+        margin-top: 24px;
+        font-size: 12px;
+      }
+    }
+
+    .contact-container {
+      background: blue;
+      width: 100%;
+      height: 30%;
+    }
+
+    .soc-container {
+      background: lime;
+      height: 15%;
+      width: 100%;
+    }
+  }
+
+  .foot-right {
+    //background: yellow;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .big-logo-container {
+      height: 70%;
+      width: 70%;
+      background: black;
+      background-image: url('../assets/emblem2.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.2;
+    }
+  }
+}
+
+.copyright-container {
+  display: none;
+  background: red !important;
+  color: white !important;
+  z-index: 9999;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
 
 .tagline-section {
   height: 100vh !important;
@@ -712,7 +795,7 @@ $pageHeight: calc(100vh - 100px);
 
 #case4 {
   p, h4, a {
-    color: black !important;
+    color: white !important;
   }
   .link-btn {
     background: #5A9342;
@@ -937,7 +1020,7 @@ $pageHeight: calc(100vh - 100px);
 }
 
 .fittea-logo {
-  background-image: url('../assets/fittea/logo.png');
+  background-image: url('../assets/fittea/logo-light.png');
   height: 90px;
   width: 190px;
 }
@@ -982,7 +1065,7 @@ $pageHeight: calc(100vh - 100px);
   align-items: center;
 
   p {
-    color: black;
+    color: white !important;
     opacity: 0.4;
   }
 
@@ -994,7 +1077,7 @@ $pageHeight: calc(100vh - 100px);
   h4 {
     text-transform: uppercase;
     font-size: 14px;
-    color: black;
+    color: white !important;
   }
 }
 
@@ -1044,7 +1127,7 @@ $pageHeight: calc(100vh - 100px);
 
 .left-content {
   background:white;
-  color: black !important;
+  //color: black !important;
   height: calc(100vh - 90px);
   width: 75%;
   display: flex;
