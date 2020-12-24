@@ -3,18 +3,27 @@ export default {
   name: 'Home',
   data() {
     return {
-      currentPhoto: 'assets/stickable/obliphica.png',
+      currentPhoto: 'assets/stickable/lyft.png',
       stick: false,
       unstick: null,
       windowScroll: null,
       positions: {
         stickable1: null,
-        stickable2: null
+        stickable2: null,
+        case1: null,
+        case2: null,
+        case3: null,
+        case4: null,
+        case5: null,
+        case6: null,
       },
       stickablePhotos: [
-        'assets/stickable/ateam.png',
         'assets/stickable/maskfone.png',
-        'assets/stickable/obliphica.png'
+        'assets/stickable/obliphica.png',
+        'assets/stickable/lyft.png',
+        'assets/stickable/fittea.png',
+        'assets/stickable/superscreen.png',
+        'assets/stickable/loaded8s.png'
       ]
     }
   },
@@ -26,7 +35,7 @@ export default {
   },
   mounted() {
     console.log('home mounted');
-    this.cyclePhotos();
+    //this.cyclePhotos();
 
     var rect1 = document.getElementById("stickable1").getBoundingClientRect();
     var rect2 = document.getElementById("stickable2").getBoundingClientRect();
@@ -88,14 +97,48 @@ export default {
     handleScroll() {
       this.windowScroll = window.scrollY;
 
-      console.log('rect1.top', this.positions.stickable1);
-      console.log('rect2.top', this.positions.stickable2);
-      console.log('windowScroll', this.windowScroll);
+      //console.log('rect1.top', this.positions.stickable1);
+      //console.log('rect2.top', this.positions.stickable2);
+      //console.log('windowScroll', this.windowScroll);
 
-      if(this.windowScroll >= this.positions.stickable1 && this.windowScroll <= this.positions.stickable2 ) {
+      if(this.windowScroll >= this.positions.stickable1 - 80 && this.windowScroll <= this.positions.stickable2 - 80 ) {
         this.stick = true;
       } else {
         this.stick = false;
+      }
+
+      var pad = 400;
+
+      if(this.windowScroll <= (this.positions.case1 + pad)) { //case 1 scroll
+        console.log('case 1 img load');
+        this.currentPhoto = this.stickablePhotos[0];
+        document.getElementById('stickable1').style.backgroundImage = 'url(' +  require('@/' + this.currentPhoto) + ')';
+        document.getElementById('stickable2').style.backgroundImage = 'url(' +  require('@/' + this.currentPhoto) + ')';
+      } else if(this.windowScroll <= (this.positions.case2 + pad)) { //case 2 scroll
+        console.log('case 2 img load');
+        this.currentPhoto = this.stickablePhotos[1];
+        document.getElementById('stickable1').style.backgroundImage = 'url(' +  require('@/' + this.currentPhoto) + ')';
+        document.getElementById('stickable2').style.backgroundImage = 'url(' +  require('@/' + this.currentPhoto) + ')';
+      } else if(this.windowScroll <= (this.positions.case3 + pad)) { //case 3 scroll
+        console.log('case 3 img load');
+        this.currentPhoto = this.stickablePhotos[2];
+        document.getElementById('stickable1').style.backgroundImage = 'url(' +  require('@/' + this.currentPhoto) + ')';
+        document.getElementById('stickable2').style.backgroundImage = 'url(' +  require('@/' + this.currentPhoto) + ')';
+      } else if(this.windowScroll <= (this.positions.case4 + pad)) { //case 4 scroll
+        console.log('case 4 img load');
+        this.currentPhoto = this.stickablePhotos[3];
+        document.getElementById('stickable1').style.backgroundImage = 'url(' +  require('@/' + this.currentPhoto) + ')';
+        document.getElementById('stickable2').style.backgroundImage = 'url(' +  require('@/' + this.currentPhoto) + ')';
+      } else if(this.windowScroll <= (this.positions.case5 + pad)) { //case 5 scroll
+        console.log('case 5 img load');
+        this.currentPhoto = this.stickablePhotos[4];
+        document.getElementById('stickable1').style.backgroundImage = 'url(' +  require('@/' + this.currentPhoto) + ')';
+        document.getElementById('stickable2').style.backgroundImage = 'url(' +  require('@/' + this.currentPhoto) + ')';
+      } else { //case 6 scroll
+        console.log('case 6 img load');
+        this.currentPhoto = this.stickablePhotos[5];
+        document.getElementById('stickable1').style.backgroundImage = 'url(' +  require('@/' + this.currentPhoto) + ')';
+        document.getElementById('stickable2').style.backgroundImage = 'url(' +  require('@/' + this.currentPhoto) + ')';
       }
 
       console.log('stick?', this.stick);
@@ -130,15 +173,15 @@ export default {
       <div class="tagline"></div>
     </section>
     
-    <!-- lyft case study -->
+    <!-- maskfone -->
     <section class="content-section type0 ctnt" id="case1">
-      <div class="left-content" style="background-color:#EA0B8C">
+      <div class="left-content" style="background-color:#141414">
         <div class="left-inner">
-          <div class="case-logo lyft-logo"></div>
           <div class="case-text-container">
-            <p>UPRISE was brought on to the influencer and celebrity campaign for Lyft. Activating top influencers (TheGabbieShow, Coby Persin, Jon Paul Piques amongst others) as well as bringing celebrities to the table such as Sean “Diddy” Combs to create exclusive activations. Additionally, UPRISE generated red carpet event placements for Lyft to allow for additional press.</p>
-            <a href="#">lyft.com</a>
-            <h4>Talent Activation / Increase Market Awareness / Content Creation</h4>
+            <div class="case-logo maskfone-logo"></div>
+            <h4>STRATEGIC CONSULTING / CONTENT CREATION / WEB DEVELOPMENT</h4>
+            <p>This just so happens to be descriptive text, detailing Uprise Management's involvement with Maskfone, and the creative work commissioned on their end in order to elevate the brand.</p>
+            <a href="https://maskfone.com" class="link-btn">maskfone.com 🡒</a>
           </div>        
         </div>
       </div>
@@ -147,78 +190,86 @@ export default {
       </div>
     </section>
     
-    <!-- maskfone case study -->
+    <!-- obliphica -->
     <section class="content-section type0" id="case2">
-      <div class="left-content" style="background:#e">
-        <div class="case-text-container">
-          <div class="type1-logo maskfone-logo"></div>
-          <p>This is a description of the case study for the client at hand. In this particular case, Maskfone is being showcase.</p>
-          <a href="#">maskfone.com</a>
-          <h4>Increase Market Awareness / Content Creation / Web Development</h4>
-        </div>
-      </div>
-    </section>
-
-    <!-- obliphica case study -->
-    <section class="content-section type0" id="case3">
-      <div class="left-content" style="background:#eee">
-        <div class="right-content-inner">
-          <div class="case-logo obliphica-logo"></div>
+      <div class="left-content" style="background:#6B8D06">
+        <div class="left-inner">
           <div class="case-text-container">
-            <p>Rebranded Obliphica Professional’s look entirely. Consulted the brand and establish new directive, new creative flow, secured talent, all content creation, award winning spatial design and a fresh new branding. Overseen entire celebrity campaign with award winning latin artist Natti Natasha. Created and produced entire global campaign feat. Madison Beer, launching fall 2019.</p>
-            <a href="#">obliphica.com</a>
+            <div class="case-logo obliphica-logo"></div>
             <h4>Strategic Consulting / Content Creation / Campaign Production / Branding / Spatial Design / Talent Sourcing</h4>
-          </div>
+            <p>Rebranded Obliphica Professional’s look entirely. Consulted the brand and establish new directive, new creative flow, secured talent,
+all content creation, award winning spatial design and a fresh new branding. Overseen entire celebrity campaign with award winning latin
+artist Natti Natasha. Created and produced entire global campaign feat. Madison Beer, launching fall 2019.</p>
+            <a href="https://obliphica.com" class="link-btn">obliphica.com 🡒</a>
+          </div>        
         </div>
-      </div>
-      <div class="right-content">
-        <div class="left-inner"></div>
       </div>
     </section>
 
-    <!-- superscreen case study -->
-    <section class="content-section type1" id="case4">
+    <!-- lyft -->
+    <section class="content-section type0" id="case3">
+      <div class="left-content" style="background:#352AB5">
+        <div class="left-inner">
+          <div class="case-text-container">
+            <div class="case-logo lyft-logo"></div>
+            <h4>Strategic Consulting / Content Creation / Campaign Production / Branding / Spatial Design / Talent Sourcing</h4>
+            <p>Rebranded Obliphica Professional’s look entirely. Consulted the brand and establish new directive, new creative flow, secured talent,
+all content creation, award winning spatial design and a fresh new branding. Overseen entire celebrity campaign with award winning latin
+artist Natti Natasha. Created and produced entire global campaign feat. Madison Beer, launching fall 2019.</p>
+            <a href="https://lyft.com" class="link-btn">lyft.com 🡒</a>
+          </div>   
+        </div>
+      </div>
+    </section>
+
+    <!-- fittea -->
+    <section class="content-section type0" id="case4">
+      <div class="left-content" style="background:#E0F5E6">
+        <div class="left-inner">
+          <div class="case-text-container">
+            <div class="case-logo fittea-logo"></div>
+            <h4>Strategic Consulting / Content Creation / Campaign Production / Branding / Spatial Design / Talent Sourcing</h4>
+            <p>Rebranded Obliphica Professional’s look entirely. Consulted the brand and establish new directive, new creative flow, secured talent,
+all content creation, award winning spatial design and a fresh new branding. Overseen entire celebrity campaign with award winning latin
+artist Natti Natasha. Created and produced entire global campaign feat. Madison Beer, launching fall 2019.</p>
+            <a href="https://fittea.com" class="link-btn">fittea.com 🡒</a>
+          </div>        
+        </div>
+      </div>
+    </section>
+
+    <!-- superscreen -->
+    <section class="content-section type1" id="case5">
       <div class="backdrop-layer"></div>
       <div class="content-layer">
-        <div class="left-content">
-          <div class="type1-logo superscreen-logo"></div><h1>SUPERSCREEN</h1>
-        </div>
-        <div class="right-content">
-          <div class="case-text-container">
-            <p>This is a description of the case study for the client at hand. In this particular case, Maskfone is being showcase.</p>
-            <a href="#">project.com</a>
-            <h4>Increase Market Awareness / Content Creation / Web Development</h4>
+        <div class="left-content" style="background-color:#181816">
+          <div class="left-inner">
+            <div class="case-text-container">
+              <div class="case-logo superscreen-logo"></div>
+              <h4>Strategic Consulting / Content Creation / Campaign Production / Branding / Spatial Design / Talent Sourcing</h4>
+              <p>Rebranded Obliphica Professional’s look entirely. Consulted the brand and establish new directive, new creative flow, secured talent,
+  all content creation, award winning spatial design and a fresh new branding. Overseen entire celebrity campaign with award winning latin
+  artist Natti Natasha. Created and produced entire global campaign feat. Madison Beer, launching fall 2019.</p>
+              <a href="https://superscreen.com" class="link-btn">superscreen.com 🡒</a>
+            </div>  
           </div>
         </div>
       </div>
     </section>
 
-    <!-- fittea case study --> 
-    <section class="content-section type0" id="case5">
-      <div class="left-content">
-        <div class="left-inner"></div>
-      </div>
-      <div class="right-content">
-        <div class="right-content-inner">
-          <div class="case-logo fittea-logo"></div>
-          <div class="case-text-container">
-            <p>UPRISE oversaw the entire marketing campaign for Fit Tea securing all talent in order to generate the market awareness the brand wanted. The campaign goals were all surpassed thanks to onboarding talent such as Kim Kardashian, Victoria Justice, Kylie Jenner, Khloe Kardashian, Vanessa Hudgens, Sarah Hyland, Kat Graham, Ashley Benson, Christina Milian, Amber Rose, Lindsay Lohan and many more.</p>
-            <a href="#">fittea.com</a>
-            <h4>Talent Activation / Social Strategy</h4>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- loaded8s case study -->
+    <!-- loaded8s -->
     <section class="content-section type0" id="case6">
-      <div class="left-content">
-        <div class="case-logo loaded8s-logo"></div>
+      <div class="left-content" style="background: #25134F">
         <div class="case-text-container">
-          <p>This is a description of the case study for the client at hand. In this particular case, Maskfone is being showcase.</p>
-          <a href="#">project.com</a>
-          <h4>Increase Market Awareness / Content Creation / Web Development</h4>
+        <div class="left-inner">
+          <div class="case-logo loaded8s-logo"></div>
+          <h4>Strategic Consulting / Content Creation / Campaign Production / Branding / Spatial Design / Talent Sourcing</h4>
+          <p>Rebranded Obliphica Professional’s look entirely. Consulted the brand and establish new directive, new creative flow, secured talent,
+all content creation, award winning spatial design and a fresh new branding. Overseen entire celebrity campaign with award winning latin
+artist Natti Natasha. Created and produced entire global campaign feat. Madison Beer, launching fall 2019.</p>
+          <a href="https://superscreen.com" class="link-btn">superscreen.com 🡒</a>
         </div>
+        </div> 
       </div>
       <div id="stickable2" class="stickable" :class="( stick ? 'right-stick' : 'right-content' )">
         <div class="right-content-inner">
@@ -267,7 +318,84 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/global';
 
-$pageHeight: 100vh;
+$pageHeight: calc(100vh - 80px);
+
+#case1 {
+  p, h4, a {
+    color: white !important;
+  }
+  .link-btn {
+    background: #BDE3DF !important;
+    color: black !important;
+  }
+}
+
+#case2 {
+  p, h4, a {
+    color: white !important;
+  }
+  .link-btn {
+    background: #D23605 !important;
+    color:white !important;
+  }
+}
+
+#case3 {
+  p, h4, a {
+    color: white !important;
+  }
+  .link-btn {
+    background: #EA0B8C;
+    color: white !important;
+  }
+}
+
+#case4 {
+  p, h4, a {
+    color: black !important;
+  }
+  .link-btn {
+    background: #5A9342;
+    color: white !important;
+  }
+}
+
+#case5 {
+  p, h4, a {
+    color: white !important;
+  }
+  .link-btn {
+    background:#2F8BC9;
+    color: white !important;
+  }
+}
+
+#case6 {
+  p, h4, a {
+    color: white !important;
+  }
+  .link-btn {
+    background: #BDD751;
+    color: white;
+  }
+}
+
+.link-btn {
+  background:white;
+  height: 40px;
+  width: 240px;
+  color: black !important;
+  line-height: 40px;
+  border-radius: 40px;
+  text-decoration: none;
+  margin-top: 32px;
+  transition: 200ms;
+  font-weight: normal;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}
 
 @keyframes bounce {
 	0%, 20%, 50%, 80%, 100% {
@@ -305,11 +433,12 @@ $pageHeight: 100vh;
 
 .stickable {
   //background-image: url('../assets/stickable/maskfone.png') !important;
-  background-color: orange;
+  background-color: white;
   background-size: cover !important;
-  background-position: center !important;
+  background-position: top !important;
   background-repeat: no-repeat !important;
-  transition: 400ms linear;
+  transition: 150ms ease;
+  width: 25%;
 }
 
 .brands-section {
@@ -325,7 +454,6 @@ $pageHeight: 100vh;
   right: 0px;
   margin: 0px;
   height: $pageHeight;
-  width: 50vw;
   background-image: url('../assets/mission-bg.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -335,7 +463,7 @@ $pageHeight: 100vh;
 .superscreen-logo {
   background-image: url('../assets/superscreen/logo.png');
   height: 60px;
-  width: 120px;
+  width: 320px;
   margin-right: 24px;
 }
 
@@ -398,7 +526,7 @@ $pageHeight: 100vh;
 
     a {
       text-align: left;
-      color: white !important;
+      //color: white !important;
       opacity: 0.7;
     }
     
@@ -410,26 +538,28 @@ $pageHeight: 100vh;
 
 .maskfone-logo {
   background-image: url('../assets/maskfone/logo.png');
-  height: 150px;
-  width: 400px;
+  height: 90px;
+  width: 300px;
+  //margin-top: 120px;
   filter: invert(1);
 }
 
 .fittea-logo {
   background-image: url('../assets/fittea/logo.png');
-  height: 60px;
-  width: 120px;
+  height: 90px;
+  width: 190px;
 }
 
 .obliphica-logo {
   background-image: url('../assets/obliphica/logo.png');
-  height: 60px;
-  width: 180px;
+  height: 90px;
+  width: 300px;
+  filter: invert(1);
 }
 
 .lyft-logo {
   background-image: url('../assets/lyft/logo.svg');
-  height: 60px;
+  height: 80px;
   width: 120px;
 }
 
@@ -439,38 +569,47 @@ $pageHeight: 100vh;
 }
 
 .case-logo {
-  //background-color: #e0e0e0;
+  //background: red;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: 32px;
-  filter: invert(1);
+  margin-bottom: 24px;
+  //margin-bottom: 32px;
+  //filter: invert(1);
 }
 
 .case-text-container {
-  width: 90%;
+  width: 80%;
   margin: 0px;
   text-align: center;
+  //background: rgba(white, 0.2);
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   p {
-    color: black !important;
+    color: black;
+    opacity: 0.4;
   }
 
   a {
-    color: black !important;
-    opacity: 0.8 !important;
+    //color: white !important;
+    opacity: 0.85 !important;
   }
 
   h4 {
     text-transform: uppercase;
     font-size: 14px;
+    color: black;
   }
 }
 
 .right-stick2 {
   background: white;
-  height: 100vh;
-  width: 30%; 
+  height: calc(100vh - 80px);
+  width: 25%; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -478,14 +617,14 @@ $pageHeight: 100vh;
   z-index: 9999;
   //padding: 0px 0px 0px 64px;
   //position: fixed;
-  top: 0px;
+  top: 80px;
   right: 0px;
 }
 
 .right-stick {
   background: white;
-  height: 100vh;
-  width: 30%; 
+  height: calc(100vh - 80px);
+  width: 25%; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -493,14 +632,14 @@ $pageHeight: 100vh;
   z-index: 9999;
   //padding: 0px 0px 0px 64px;
   position: fixed;
-  top: 0px;
+  top: 80px;
   right: 0px;
 }
 
 .right-content {
   //background: white;
-  height: 100vh;
-  width: 30%; 
+  height: calc(100vh - 80px);
+  width: 25%; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -514,8 +653,8 @@ $pageHeight: 100vh;
 .left-content {
   background:white;
   color: black !important;
-  height: 100%;
-  width: 70%;
+  height: calc(100vh - 80px);
+  width: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -535,10 +674,10 @@ $pageHeight: 100vh;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  color: white !important;
+  //color: white !important;
 
   a {
-    color: white !important;
+    //color: white !important;
   }
 }
 
@@ -561,7 +700,7 @@ $pageHeight: 100vh;
 }
 
 .tagline-backdrop {
-  filter: brightness(0.8) contrast(1);
+  filter: brightness(0.6) contrast(0.9);
   background: green;
   height: 100%;
   width: 100%;
@@ -574,7 +713,7 @@ video {
     position: absolute;
     left: 50%; /* % of surrounding element */
     top: 50%;
-    height: 100vh;
+    min-width: 100vw;
     transform: translate(-50%, -50%); /* % of current element */
 }
 }
@@ -614,7 +753,7 @@ section {
 }
 
 .content-section {
-  height: 100vh;
+  height: calc(100vh - 80px);
   width: 100%;
   margin: 0px;
 }
@@ -625,7 +764,7 @@ section {
   align-items: center;
   //justify-content: space-between;
   width: 100% !important;
-  height: 100vh !important;
+  //height: 100vh !important;
 }
 
 .type1-logo {

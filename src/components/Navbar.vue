@@ -104,9 +104,9 @@ $navHeight: 80px;
 }
 
 .navbar-container {
-    background: transparent;
-    mix-blend-mode: difference;
-    color: white;
+    background: white;
+    //mix-blend-mode: difference;
+    color:black;
     height: $navHeight;
     width: 100%;
     position: fixed;
@@ -130,7 +130,7 @@ $navHeight: 80px;
         font-family: 'Gotham', Helvetica, Arial, sans-serif;
         font-weight: bold;
         mix-blend-mode: difference;
-        opacity: 0.4;
+        //opacity: 0.4;
         font-size: 12px;
         //cursor: none;
     }
