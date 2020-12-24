@@ -301,7 +301,7 @@ integrated media photography, video and global from-start-to-finish production s
           </div>
           <div class="services-container-right">
             <ul>
-              <li @click="dropdown(0)" class="first-service"><div class="service-icon icon1"></div><span>Strategic Consulting<b :class="( droppable[0] ? '' : '' )"></b></span></li>
+              <li @click="dropdown(0)" class="first-service"><div class="service-icon icon1"></div><span>Strategic Consulting<b :class="( droppable[0] ? 'right' : 'up' )"></b></span></li>
               <div class="droppable droppable1" :class="( droppable[0] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Brand<span>-</span>Building</span>
@@ -321,7 +321,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Storytelling</span>
                 </div>
               </div>
-              <li @click="dropdown(1)"><div class="service-icon icon2"></div><span>Branding<b></b></span></li>
+              <li @click="dropdown(1)"><div class="service-icon icon2"></div><span>Branding<b :class="( droppable[1] ? 'right' : 'up' )"></b></span></li>
               <div class="droppable droppable2" :class="( droppable[1] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Art<span>-</span>Direction</span>
@@ -337,7 +337,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Vision</span>
                 </div>
               </div>
-              <li @click="dropdown(2)"><div class="service-icon icon3"></div><span>Content Creation<b></b></span></li>
+              <li @click="dropdown(2)"><div class="service-icon icon3"></div><span>Content Creation<b :class="( droppable[2] ? 'right' : 'up' )"></b></span></li>
               <div class="droppable droppable3" :class="( droppable[2] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Advertising<span>-</span>+<span>-</span>Campaign</span>
@@ -354,7 +354,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Still<span>-</span>Life<span>-</span>+<span>-</span>Editorial</span>
                 </div>
               </div>
-              <li @click="dropdown(3)"><div class="service-icon icon4"></div><span>Public Relations<b></b></span></li>
+              <li @click="dropdown(3)"><div class="service-icon icon4"></div><span>Public Relations<b :class="( droppable[3] ? 'right' : 'up' )"></b></span></li>
               <div class="droppable droppable4" :class="( droppable[3] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Email<span>-</span>Sourcing</span>
@@ -364,7 +364,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Email<span>-</span>Template<span>-</span>Creation</span>
                 </div>
               </div>
-              <li @click="dropdown(4)"><div class="service-icon icon5"></div><span>Talent<b></b></span></li>
+              <li @click="dropdown(4)"><div class="service-icon icon5"></div><span>Talent<b :class="( droppable[4] ? 'right' : 'up' )"></b></span></li>
               <div class="droppable droppable5" :class="( droppable[4] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Calabrity<span>-</span>Seeding</span>
@@ -376,7 +376,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Talent<span>-</span>Campaign<span>-</span>Global<span>-</span>Execution</span>
                 </div>
               </div>
-              <li @click="dropdown(5)"><div class="service-icon icon6"></div><span>Email<b></b></span></li>
+              <li @click="dropdown(5)"><div class="service-icon icon6"></div><span>Email<b :class="( droppable[5] ? 'right' : 'up' )"></b></span></li>
               <div class="droppable droppable6" :class="( droppable[5] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Digital<span>-</span>+<span>-</span>Traditional Press</span>
@@ -391,7 +391,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Top-tier<span>-</span>Editorial<span>-</span>Placement</span>
                 </div>
               </div>
-              <li @click="dropdown(6)"><div class="service-icon icon7"></div><span>Social Media<b></b></span></li>
+              <li @click="dropdown(6)"><div class="service-icon icon7"></div><span>Social Media<b :class="( droppable[6] ? 'right' : 'up' )"></b></span></li>
               <div class="droppable droppable7" :class="( droppable[6] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Benchmarking<span>-</span>&<span>-</span>Analysis</span>
@@ -406,7 +406,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Strategic<span>-</span>Alignment</span>
                 </div>
               </div>
-              <li @click="dropdown(7)"><div class="service-icon icon8"></div><span>Spacial Design<b></b></span></li>
+              <li @click="dropdown(7)"><div class="service-icon icon8"></div><span>Spacial Design<b :class="( droppable[7] ? 'right' : 'up' )"></b></span></li>
               <div class="droppable droppable8" :class="( droppable[7] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>3D<span>-</span>Rendering</span>
@@ -418,7 +418,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Vector<span>-</span>Graphics</span>
                 </div>
               </div>
-              <li @click="dropdown(8)"><div class="service-icon icon9"></div><span>Additional Services<b></b></span></li>
+              <li @click="dropdown(8)"><div class="service-icon icon9"></div><span>Additional Services<b :class="( droppable[8] ? 'right' : 'up' )"></b></span></li>
               <div class="droppable droppable9" :class="( droppable[8] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Advisory<span>-</span>Board<span>-</span>Assembly</span>
@@ -471,6 +471,16 @@ integrated media photography, video and global from-start-to-finish production s
 @import '../assets/styles/global';
 
 $pageHeight: calc(100vh - 80px);
+
+.right {
+  transform: rotate(180deg);
+  transition: 300ms;
+}
+
+.up {
+  transform: rotate(0deg);
+  transition: 300ms;
+}
 
 .icon1 {
   background-image: url('../assets/services/strategic-consulting.svg');
