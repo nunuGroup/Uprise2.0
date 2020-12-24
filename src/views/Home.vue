@@ -294,14 +294,14 @@ artist Natti Natasha. Created and produced entire global campaign feat. Madison 
         <div class="services-container">
           <div class="services-container-left">
             <h1>Services</h1>
-            <p>UPRISE Management is a 360 ̊ full service marketing, branding and creative agency for luxury, premium and digital brands as well as for leading
+            <p class="service-par">UPRISE Management is a 360 ̊ full service marketing, branding and creative agency for luxury, premium and digital brands as well as for leading
 e-commerce giants. UPRISE’s experience is broad; specializing in beauty, tech, food & spirits, lifestyle and hospitality. In this digital era, we deliver
 strategy-driven branding, high profile celebrity sourcing, forward-thinking creative marketing and visually rich solutions - all in conjunction with
 integrated media photography, video and global from-start-to-finish production services.</p>
           </div>
           <div class="services-container-right">
             <ul>
-              <li @click="dropdown(0)"><div class="service-icon"></div><span>Strategic Consulting<b></b></span></li>
+              <li @click="dropdown(0)" class="first-service"><div class="service-icon icon1"></div><span>Strategic Consulting<b :class="( droppable[0] ? '' : '' )"></b></span></li>
               <div class="droppable droppable1" :class="( droppable[0] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Brand<span>-</span>Building</span>
@@ -321,7 +321,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Storytelling</span>
                 </div>
               </div>
-              <li @click="dropdown(1)"><div class="service-icon"></div><span>Branding<b></b></span></li>
+              <li @click="dropdown(1)"><div class="service-icon icon2"></div><span>Branding<b></b></span></li>
               <div class="droppable droppable2" :class="( droppable[1] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Art<span>-</span>Direction</span>
@@ -337,7 +337,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Vision</span>
                 </div>
               </div>
-              <li @click="dropdown(2)"><div class="service-icon"></div><span>Content Creation<b></b></span></li>
+              <li @click="dropdown(2)"><div class="service-icon icon3"></div><span>Content Creation<b></b></span></li>
               <div class="droppable droppable3" :class="( droppable[2] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Advertising<span>-</span>+<span>-</span>Campaign</span>
@@ -354,7 +354,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Still<span>-</span>Life<span>-</span>+<span>-</span>Editorial</span>
                 </div>
               </div>
-              <li @click="dropdown(3)"><div class="service-icon"></div><span>Public Relations<b></b></span></li>
+              <li @click="dropdown(3)"><div class="service-icon icon4"></div><span>Public Relations<b></b></span></li>
               <div class="droppable droppable4" :class="( droppable[3] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Email<span>-</span>Sourcing</span>
@@ -364,7 +364,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Email<span>-</span>Template<span>-</span>Creation</span>
                 </div>
               </div>
-              <li @click="dropdown(4)"><div class="service-icon"></div><span>Talent<b></b></span></li>
+              <li @click="dropdown(4)"><div class="service-icon icon5"></div><span>Talent<b></b></span></li>
               <div class="droppable droppable5" :class="( droppable[4] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Calabrity<span>-</span>Seeding</span>
@@ -376,7 +376,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Talent<span>-</span>Campaign<span>-</span>Global<span>-</span>Execution</span>
                 </div>
               </div>
-              <li @click="dropdown(5)"><div class="service-icon"></div><span>Email<b></b></span></li>
+              <li @click="dropdown(5)"><div class="service-icon icon6"></div><span>Email<b></b></span></li>
               <div class="droppable droppable6" :class="( droppable[5] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Digital<span>-</span>+<span>-</span>Traditional Press</span>
@@ -391,7 +391,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Top-tier<span>-</span>Editorial<span>-</span>Placement</span>
                 </div>
               </div>
-              <li @click="dropdown(6)"><div class="service-icon"></div><span>Social Media<b></b></span></li>
+              <li @click="dropdown(6)"><div class="service-icon icon7"></div><span>Social Media<b></b></span></li>
               <div class="droppable droppable7" :class="( droppable[6] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Benchmarking<span>-</span>&<span>-</span>Analysis</span>
@@ -406,7 +406,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Strategic<span>-</span>Alignment</span>
                 </div>
               </div>
-              <li @click="dropdown(7)"><div class="service-icon"></div><span>Spacial Design<b></b></span></li>
+              <li @click="dropdown(7)"><div class="service-icon icon8"></div><span>Spacial Design<b></b></span></li>
               <div class="droppable droppable8" :class="( droppable[7] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>3D<span>-</span>Rendering</span>
@@ -418,7 +418,7 @@ integrated media photography, video and global from-start-to-finish production s
                   <span>Vector<span>-</span>Graphics</span>
                 </div>
               </div>
-              <li @click="dropdown(8)"><div class="service-icon"></div><span>Additional Services<b></b></span></li>
+              <li @click="dropdown(8)"><div class="service-icon icon9"></div><span>Additional Services<b></b></span></li>
               <div class="droppable droppable9" :class="( droppable[8] == true ? 'dropped' : 'collapsed' )">
                 <div class="bubble-items">
                   <span>Advisory<span>-</span>Board<span>-</span>Assembly</span>
@@ -472,13 +472,63 @@ integrated media photography, video and global from-start-to-finish production s
 
 $pageHeight: calc(100vh - 80px);
 
+.icon1 {
+  background-image: url('../assets/services/strategic-consulting.svg');
+}
+
+.icon2 {
+  background-image: url('../assets/services/branding.svg');
+}
+
+.icon3 {
+  background-image: url('../assets/services/content-creation.svg');
+}
+
+.icon4 {
+  background-image: url('../assets/services/public-relations.svg');
+}
+
+.icon5 {
+  background-image: url('../assets/services/talent.svg');
+}
+
+.icon6 {
+  background-image: url('../assets/services/email.svg');
+}
+
+.icon7 {
+  background-image: url('../assets/services/social-media.svg');
+}
+
+.icon8 {
+  background-image: url('../assets/services/spatial-design.svg');
+}
+
+.icon9 {
+  background-image: url('../assets/services/additional-services.svg');
+}
+
+.first-service {
+  border: none !important;
+}
+
 .services-container {
   background: white;
   height: 900px;
   width: 75vw;
   margin-top: 120px;
-  margin-bottom: 120px;
+  margin-bottom: 24px;
   display: flex;
+
+  .service-icon {
+    //background: black;
+    height: 32px;
+    width: 32px;
+    margin-right: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
 
   .bubble-items {
     text-align: left;
@@ -547,10 +597,13 @@ $pageHeight: calc(100vh - 80px);
     }
     
     li {
-      padding: 24px 0px 24px 32px;
+      padding: 18px 0px 18px 24px;
       //border: 1px solid black;
       cursor: pointer;
       border-top: 1px #e0e0e0 solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       span {
         font-size: 14px;
@@ -585,10 +638,15 @@ $pageHeight: calc(100vh - 80px);
     }
   }
 
+  .service-par {
+    font-size: 14px;
+  }
+
   h1 {
     font-size: 48px;
     font-weight: normal;
     margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   p {
