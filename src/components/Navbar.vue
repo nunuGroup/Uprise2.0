@@ -1,5 +1,5 @@
 <script>
-//import store from '../store'
+import store from '../store';
 
 export default {
     name: 'Navbar',
@@ -12,6 +12,9 @@ export default {
         },
         contextHash() {
             return this.$route.hash;
+        },
+        scrolled() {
+            return store.state.scrolled;
         }
     },
     methods: {
@@ -24,7 +27,7 @@ export default {
 </script>
 
 <template>
-  <div class="navbar-container">
+  <div class="navbar-container" :class="( scrolled ? 'opaque' : 'transparent' )">
     <router-link class="home-link" to="/"><div class="center-logo"></div></router-link>
     <ul class="nav-items">
         <li class="nav-item hoverable"><router-link class="hoverable" to="/services">SERVICES</router-link></li>
@@ -38,7 +41,15 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/global';
 
-$navHeight: 80px;
+$navHeight: 90px;
+
+.opaque {
+    background: white !important;
+}
+
+.transparent {
+    background: transparent !important;
+}
 
 .home-link {
     opacity: 1 !important;
@@ -104,6 +115,7 @@ $navHeight: 80px;
 }
 
 .navbar-container {
+    transition: 300ms;
     background: white;
     //mix-blend-mode: difference;
     color:black;

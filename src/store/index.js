@@ -4,8 +4,15 @@ export default createStore({
   state: {
     editMode: false,
     globalTrans: false,
+    scrolled: false
   },
   mutations: {
+    scrolled(state) {
+      state.scrolled = true;
+    },
+    unscrolled(state) {
+      state.scrolled = false;
+    },
     toggleEditMode(state) {
       state.editMode = !state.editMode;
     },
