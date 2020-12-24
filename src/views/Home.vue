@@ -278,24 +278,34 @@ artist Natti Natasha. Created and produced entire global campaign feat. Madison 
       </div>
     </section>
 
-    <!-- who we've worked with -->
+    <!-- services -->
     <section class="brands-section">
+      <div class="brands-section-inner">
+        <div class="service-grid-container">
+          <div class="service-item"></div>
+          <div class="service-item"></div>
+          <div class="service-item"></div>
+          <div class="service-item"></div>
+          <div class="service-item"></div>
+          <div class="service-item"></div>
+          <div class="service-item"></div>
+          <div class="service-item"></div>
+          <div class="service-item"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- brands -->
+    <section class="services-section">
       <div class="brands-section-inner">
         who we've worked with
       </div>
     </section>
 
-    <!-- services -->
+    <!-- hai -->
     <section class="services-section">
       <div class="brands-section-inner">
-        Banner
-      </div>
-    </section>
-
-    <!-- services -->
-    <section class="services-section">
-      <div class="brands-section-inner">
-        Services
+        stuffs
       </div>
     </section>
 
@@ -319,6 +329,25 @@ artist Natti Natasha. Created and produced entire global campaign feat. Madison 
 @import '../assets/styles/global';
 
 $pageHeight: calc(100vh - 80px);
+
+.service-grid-container {
+  background: red;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 32px;
+  width: 70vw;
+  height: 100%;
+  margin-top: 72px;
+  margin-bottom: 72px;
+
+  .service-item {
+    background: blue;
+    height: 600px;
+    width: 100%;
+  }
+}
 
 #case1 {
   p, h4, a {
@@ -442,9 +471,10 @@ $pageHeight: calc(100vh - 80px);
 }
 
 .brands-section {
-  height: 150vh;
+  //height: 150vh;
   width: 100%;
   background: #e0e0e0;
+  //padding: 64px;
 }
 
 .stick {
@@ -690,7 +720,7 @@ $pageHeight: calc(100vh - 80px);
 .sec1 {
   justify-content: center !important;
   background: white !important;
-  height: 107vh !important;
+  height: 112vh !important;
   width: 100%;
 }
 
